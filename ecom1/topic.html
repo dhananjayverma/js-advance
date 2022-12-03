@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        .para{
+            background-color: crimson;
+            color: yellow;
+        }
+        #highPriority{
+            background-color: crimson;
+        }
+        #lowPriority{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>massi school</h1>
+    </div>
+    <a>masasi school</a>
+</body>
+</html>
+
+<script>
+    var para1=document.createElement("p");
+    para1.innerText="this is dj";
+    para1.setAttribute("class","para");
+    // para1.style.backgroundColor="crimson";
+    // para1.style.color="white";
+ document.querySelector("div").append(para1);
+ var myanchor=document.querySelector("a");
+ myanchor.setAttribute("href","https://masaischool.com/");
+myanchor.setAttribute("target","_self");
+
+</script>

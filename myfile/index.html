@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple creativity</title>
+    <Style>
+    
+        h1{
+            text-align: center;
+            color: darkcyan;
+        }
+        .box{
+            /* height:500px; */
+            width:50%;
+            border: 1px solid teal;
+            margin: auto;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border-radius: 20px; 
+        }
+
+        #parent-box{
+            /* border: 2px solid crimson; */
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            gap:5%;
+        }
+
+        .avatar1{
+            height:350px;
+            width:80%;
+            padding:10px;
+            border-radius: 20px;
+        }
+       p{
+        margin: 10px 0px;
+    } 
+
+@media (min-width:0px) and (max-width:480px){
+    #parent-box{
+        display:grid;
+        grid-template-columns:repeat(1,1fr);
+    }
+    .box{
+        width:80%;
+    }  
+}
+
+</Style>
+</head>
+<body style="background-color:darkayn;">
+    <h1>Thuthun Brother's</h1>
+
+    <div id="parent-box">
+        <div class="box">
+            <img  class="avatar1"
+            src="https://lh3.googleusercontent.com/drive-viewer/AFDK6gOhbmbQqwfKQSVEjo3NiZg0-O9BjYMwGv2up_nK1b3ewAVZz3wkK2HJ8_YxmfCUaecuL3Ip9FtlLTkaOfOBlhFv6kai=w1366-h657" 
+            alt="vivek">
+            <h3>Vivek  Shrivastava</h3>
+            <p>Journalist</p>
+          </div>
+        
+         <div class="box">
+            <img class="avatar1"
+            src="https://lh3.googleusercontent.com/drive-viewer/AFDK6gOmpFSQsaa9EMyf-YOb1SlD1MdfpwhgIc5dlEAzlvmGmt83ufhrYwGwwfrbPdjA5HPchq5iymf3hCg91IhUHCPfFP5LSw=w1366-h657"
+            alt="vicky">
+            <h3>Aditya Saxsena</h3>
+            <p>Engineer</p>
+
+        </div>
+        <div class="box">
+            
+            <img  class="avatar1"
+            src="https://lh3.googleusercontent.com/drive-viewer/AFDK6gPCrQPTeyu7vnYKjstDWd-Tp-9v7v8tvGTrbrCrBQcBvQGKb7a3GkKRII0fE11mNy2jvrsvkuyiSGLs-p0NW6lFcPURng=w1366-h657"
+             alt="ankit">
+             <h3>Ankit Maurya Shrivastava</h3>
+             <p>Engineer</p>
+
+        </div>
+        <div class="box">
+            <img class="avatar1"
+            src="https://lh3.googleusercontent.com/drive-viewer/AFDK6gM1HbvHP3Ww5CYmcjhT4cmky6pKz2q0Q42IWBtkg785RaSVz2tRVndyj9SOz9iMPYIbBfmoTa2Wi_Qc6ZW592zXiSU3FA=w1366-h657" 
+            alt="Dhananjay">
+          <h3>Dhananjay Kumar Verma</h3>
+       <p>Engineer</p>
+   </div>
+<div class="box">
+            <img class="avatar1"
+            src="https://lh3.googleusercontent.com/drive-viewer/AFDK6gOkRdUbj7kuYTl5Rrxy0pjpGgKAC3yCurnFp7vDNR1WKNRycB5n57Hv912m1zF1KMILMatJU8FRpFCBbxPI4-lJSkJz=w1366-h657" 
+            alt="lucky">
+            <h3>Chandan Raj</h3>
+            <p>Financer Hero FinCorp</p>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

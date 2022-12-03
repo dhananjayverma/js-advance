@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+
+<div id="container">
+
+</div>
+
+<div class="update">
+    <input type="text" id="name" placeholder="enter new name">
+    <input type="text" name="" id="id">
+    <button onclick="update()">update</button>
+</div>
+
+<div class="delete">
+    <input type="text"  id="id1">
+    <button onclick="deleteData()">Delete</button>
+</div>
+
+</body>
+</html>
+<script>
+    async function GetUser(){
+     let res=await fetch("http://localhost:3004/users")
+     let data=await res.json();
+     appendData(data);
+    }
+    function appendData(data){
+     let container=document.getElementById("container");
+     data.map((el)=>{
+       let div=document.createElement("div");
+       let h1=document.createElement("h1");
+       h1.innerText=el.name;
+       div.append(h1)
+       container.append(div)
+     })
+    }
+    GetUser()
+    async function update(){
+        let id=document.getElementById('id').value;
+        let name={
+            name:document.getElementById("name").value
+           }
+        let res=await fetch(`http://localhost:3004/users/${id}`,{
+            method:"PATCH",
+            body:JSON.stringify(name),
+            headers:{
+                'Content-Type':"application/json"
+            }
+        })
+        let data=await res.json();
+
+    }
+async function deleteData(){
+    let id=document.getElementById("id1").value;
+    console.log(id);
+    let res=await fetch(`http://localhost:3004/users/${id}`,{
+        method:"DELETE"
+    });
+    let data=await res.json();
+    
+}
+</script>

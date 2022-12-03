@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    <!-- //localStorage.getitem(keyname) -->
+    var name=localStorage.getItem("studentname1");
+    console.log(name);
+    var head1=document.createElement("h1");
+    head1.innerText=name;
+    document.querySelector("body").append(head1);
+
+    // var noName=localStorage.getItem("score");
+    // console.log(noName);
+
+   var arr1=localStorage.getItem("arrofnums");
+//    console.log(arr1,typeof arr1);
+console.log(arr1);
+
+var originalArr=JSON.parse(arr1);
+console.log(originalArr);
+
+
+
+var student=localStorage.getItem("studentInfo");
+console.log(student);
+
+</script>

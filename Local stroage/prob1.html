@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <img  height="200px"
+    src="https://media.istockphoto.com/id/1218928612/photo/puppies-golden-retriever-breed-with-pedigree-playing-running-they-roll-in-the-grass-in-slow.jpg?s=612x612&w=0&k=20&c=8_qYerdxczfs1E33tucagE-DFiMereboHFBm7jgTBTs=" alt="puppy">
+      
+    <div>
+        <p>Likes:<span id="likes"></span></p>
+        <p>dislike:<span id="dislike"></span></p>
+    </div>
+    <br>
+    <button id="likebtn">Like</button>
+<button id="dislikebtn">DisLike</button>
+</body>
+</html>
+
+<script>
+    document.getElementById("likebtn").addEventListener("click",likefun);
+    document.getElementById("dislikebtn").addEventListener("click",dislikefun);
+   var likecount=localStorage.getItem("puppylike")||0;
+   document.getElementById("likes").innerText=likecount;
+
+    var dislikecount;
+    if(localStorage.getItem("puppydislike")==null){
+        dislikecount=0;
+    }else{
+        dislikecount=localStorage.getItem("puppydislike");
+    }
+    document.getElementById("dislike").innerText=dislikecount;
+    
+
+    
+
+    function likefun(){
+        likecount++;
+        document.getElementById("likes").innerText=likecount;
+       //setItem
+       localStorage.setItem("puppylike",likecount);
+    }
+    function dislikefun(){
+    dislikecount++;
+    document.getElementById("dislike").innerText=dislikecount;
+    localStorage.setItem("puppydislike",dislikecount);
+    }
+
+
+
+
+</script>

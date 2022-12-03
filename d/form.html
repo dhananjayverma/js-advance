@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+     <h1>my form</h1>
+    <input  id="name" placeholder="enter name" value="">
+    <input id="mail" placeholder="enter mail" value="">
+    <input type="submit"/>
+</form>
+<h1>display name here</h1>
+<h2>display email here</h2>
+</body>
+</html>
+<script>
+ document.querySelector("form").addEventListener("submit",getData);
+
+function getData(){
+    event.preventDefault();
+ var username=document.getElementById("name").value;
+        var email=document.getElementById("mail").value;
+        console.log(username,email);
+        document.querySelector("h1").innerText=username;
+        document.querySelector("h2").innerText=email;
+}
+
+
+
+
+</script>
+
+
+
+<!-- default behavior of form -- send data to backend on submit>
+    <!-- preventDefault->it will see whether default behavior and action can be cancel
+    it will prevent and cancel this procedure-->
